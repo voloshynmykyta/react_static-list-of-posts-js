@@ -1,12 +1,10 @@
-import './App.scss';
-
 import postsFromServer from './api/posts.json';
 import commentsFromServer from './api/comments.json';
 import usersFromServer from './api/users.json';
 import { PostList } from './components/PostList/PostList';
 
 const findUser = (users, userId) => {
-  return users.find(user => user.id === userId) || {};
+  return users.find(user => user.id === userId);
 };
 
 const findComments = (comments, postId) => {
